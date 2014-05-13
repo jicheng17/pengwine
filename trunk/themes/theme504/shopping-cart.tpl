@@ -1,6 +1,6 @@
 {capture name=path}{l s='Your shopping cart'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
-<h1 id="cart_title">{l s='Shopping cart summary'}</h1>
+<!--   <h1 id="cart_title">{l s='Shopping cart summary'}</h1> -->
 {if isset($account_created)}
 	<p class="success">
 		{l s='Your account has been created.'}
@@ -41,7 +41,7 @@
 	</div>
 *}    
 {/if}
-<p class="p-cart">{l s='Your shopping cart contains:'} <span id="summary_products_quantity">{$productNumber} {if $productNumber == 1}{l s='product'}{else}{l s='products'}{/if}</span></p>
+<!--  <p class="p-cart">{l s='Your shopping cart contains:'} <span id="summary_products_quantity">{$productNumber} {if $productNumber == 1}{l s='product'}{else}{l s='products'}{/if}</span></p>  -->
 <div id="order-detail-content" class="table_block">
 	<table id="cart_summary" class="std">
 		<thead>
