@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<links>
+	<link>
+		<field1_4>2008</field1_4>
+		<field2_4>Petit Chablis</field2_4>
+		<field3_4>Domaine Du Colombier</field3_4>
+		<field4_4>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut quis nostrud exercitation.</field4_4>
+		<field5_4>Shop Now!</field5_4>
+		<field1_5>2008</field1_5>
+		<field2_5>Petit Chablis</field2_5>
+		<field3_5>Domaine Du Colombier</field3_5>
+		<field4_5>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut quis nostrud exercitation.</field4_5>
+		<field5_5>Shop Now!</field5_5>
+		<img>slides/slide_00.jpg</img>
+	</link>
+	<link>
+		<field1_4>2001-03</field1_4>
+		<field2_4>Fable Wines</field2_4>
+		<field3_4>Excepteur sint</field3_4>
+		<field4_4>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut quis nostrud exercitation.</field4_4>
+		<field5_4>Shop Now!</field5_4>
+		<field1_5>2001-03</field1_5>
+		<field2_5>Fable Wines</field2_5>
+		<field3_5>Excepteur sint</field3_5>
+		<field4_5>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut quis nostrud exercitation.</field4_5>
+		<field5_5>Shop Now!</field5_5>
+		<img>slides/slide_01.jpg</img>
+	</link>
+	<link>
+		<field1_4>2006</field1_4>
+		<field2_4>Amity Wine</field2_4>
+		<field3_4>Excepteur sint</field3_4>
+		<field4_4>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut quis nostrud exercitation.</field4_4>
+		<field5_4>Shop Now!</field5_4>
+		<field1_5>2006</field1_5>
+		<field2_5>Amity Wine</field2_5>
+		<field3_5>Excepteur sint</field3_5>
+		<field4_5>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut quis nostrud exercitation.</field4_5>
+		<field5_5>Shop Now!</field5_5>
+		<img>slides/slide_02.jpg</img>
+	</link>
+	<link>
+		<img>slides/slide_03.jpg</img>
+	</link>
+</links>
