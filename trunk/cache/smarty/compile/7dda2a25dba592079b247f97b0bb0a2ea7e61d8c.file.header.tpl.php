@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-05-13 09:41:27
+<?php /* Smarty version Smarty-3.1.8, created on 2014-05-14 19:06:35
          compiled from "/var/www/prestashop/themes/theme504/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14650326455371be973c87c8-51589627%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2581190415373948bd5e228-43541150%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7dda2a25dba592079b247f97b0bb0a2ea7e61d8c' => 
     array (
       0 => '/var/www/prestashop/themes/theme504/header.tpl',
-      1 => 1399911223,
+      1 => 1400083468,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14650326455371be973c87c8-51589627',
+  'nocache_hash' => '2581190415373948bd5e228-43541150',
   'function' => 
   array (
   ),
@@ -52,9 +52,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_5371be97430b86_39657412',
+  'unifunc' => 'content_5373948bdd0f27_28970361',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5371be97430b86_39657412')) {function content_5371be97430b86_39657412($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/prestashop/tools/smarty/plugins/modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5373948bdd0f27_28970361')) {function content_5373948bdd0f27_28970361($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include '/var/www/prestashop/tools/smarty/plugins/modifier.escape.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6 no-js" lang="en"><![endif]-->
 <!--[if IE 7 ]><html class="ie ie7 no-js" lang="en"><![endif]-->
@@ -141,31 +141,6 @@ modernizr-2.5.3.min.js"></script>
 <?php }?>
 <div id="wrapper1">
 <div id="wrapper2">
-<!--  
-<div id="topmenu">
-<div id="topmenu_center">
-	<ul class="sf-menu clearfix">
-		<li >
-			<a href="http://localhost/prestashop/index.php?id_category=3&controller=category&id_lang=1">CABERNET SAUVIGNON</a>
-			<ul><li >
-				<a href="http://localhost/prestashop/index.php?id_category=4&controller=category&id_lang=1">Lorem ipsum</a>
-				</li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=5&controller=category&id_lang=1">Dolor sit amet</a>
-				</li><li ><a href="http://localhost/prestashop/index.php?id_category=6&controller=category&id_lang=1">Conse ctetur</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=7&controller=category&id_lang=1">Adipisicing</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=8&controller=category&id_lang=1">Elit sed</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=9&controller=category&id_lang=1">Do eiusmod</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=10&controller=category&id_lang=1">Tempor</a></li>
-			</ul>
-		</li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=11&controller=category&id_lang=1">SYRAH</a></li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=12&controller=category&id_lang=1">SHIRAZ</a></li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=13&controller=category&id_lang=1">PINOT NOIR</a></li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=14&controller=category&id_lang=1">BORDEAUX BLENDS</a></li>
-	</ul>
-</div>
-</div>
--->
 <div id="wrapper3" class="clearfix">
 <header id="header">
 	<a id="header_logo" href="<?php echo $_smarty_tpl->tpl_vars['base_dir']->value;?>
