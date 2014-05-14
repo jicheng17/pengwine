@@ -6,7 +6,7 @@
 	{assign var='multi_shipping' value='0'}
 {/if}
 {if !$opc}
-<!-- Steps -->
+<!-- Steps 
 <ul id="order_steps" class="{if $current_step=='summary'}step1{elseif $current_step=='login'}step2{elseif $current_step=='address'}step3{elseif $current_step=='shipping'}step4{elseif $current_step=='payment'}step5{/if}">
 	<li class="{if $current_step=='summary'}step_current{else}{if $current_step=='payment' || $current_step=='shipping' || $current_step=='address' || $current_step=='login'}step_done{else}step_todo{/if}{/if}">
 		{if $current_step=='payment' || $current_step=='shipping' || $current_step=='address' || $current_step=='login'}
@@ -48,5 +48,6 @@
 		<span>{l s='Payment'}</span>
 	</li>
 </ul>
-<!-- /Steps -->
+
 {/if}
+-->

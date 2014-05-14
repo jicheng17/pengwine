@@ -29,7 +29,7 @@ body {font:normal 12px "Arial", Arial, Helvetica, sans-serif;color:#999;}
 .clearfix:after {height:0;display:block;clear:both;font-size:0;visibility:hidden;content:".";}
 
 .center_column p {padding:20px 0 0 0;color:#999;}
-.center_column a {color:#8d0303;text-decoration:underline;}
+.center_column a {color:#ffffff;text-decoration:underline;}
 .center_column a:hover {text-decoration:none;}
 
 #center_column h1 {margin:10px 0 0 0;padding:10px 20px;background:#8d0303;font:normal 18px "Georgia";color:#f8c26d;}
@@ -50,7 +50,7 @@ a.product_descr:hover {color:#000;}
 #center_column table.std th,
 #center_column table.std td,
 #center_column form.std h3,
-#center_column div.zoomdiv {border-color:#e5e5e5 !important;}
+#center_column div.zoomdiv {border-color:#252525; color: #ffffff;}
 
 /* global prices color */
 .pricecolor {color:#f8c26d;}
@@ -61,7 +61,7 @@ table#cart_summary td.cart_total,
 
 /* optional background color */
 #center_column .bgcolor,
-#center_column table.std th {background-color:#f5f5f5;}
+#center_column table.std th {background-color:#1A1717;}
 
 /* footer links */
 ul.footer_links {height:16px;clear:both;padding:20px 0 0 0;}
@@ -1727,7 +1727,7 @@ ul.step5 {background-position:0 -224px;}
 
 
 /* voucher form */
-#voucher fieldset {padding:10px;border-width:1px;border-style:solid;}
+#voucher fieldset {padding:10px;border-width:1px;border-style:solid;color:#252525}
 #voucher fieldset h2 {float:left;margin:0;padding:6px 20px 0 10px;}
 #voucher fieldset p {float:left;margin:0;padding:2px 20px 0 0;display:table-cell;}
 #voucher fieldset p.submit {padding:0;}
