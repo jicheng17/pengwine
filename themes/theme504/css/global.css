@@ -39,14 +39,14 @@ body {font:normal 12px "Arial", Arial, Helvetica, sans-serif;color:#999;}
 .center_column h3,
 .center_column h4 {padding:20px 0 0 0;font:bold 14px "Georgia";color:#8d0303;text-transform:uppercase;}
 
-a.product_link {font:13px "Georgia";color:#830303;text-decoration:none;text-transform:none !important;}
-a.product_link:hover {color:#000;}
+a.product_link {font:13px "Georgia";color:#FFFFFF;text-decoration:none;text-transform:none !important;}
+a.product_link:hover {color:#FFFFFF;}
 
 a.product_descr {font:11px "Arial";color:#999;text-decoration:none;text-transform:none !important;}
 a.product_descr:hover {color:#000;}
 
 /* global border color */
-#center_column .bordercolor,
+/* #center_column .bordercolor, */
 #center_column table.std th,
 #center_column table.std td,
 #center_column form.std h3,
@@ -57,7 +57,7 @@ a.product_descr:hover {color:#000;}
 
 table#cart_summary td.price,
 table#cart_summary td.cart_total,
-#center_column span.price {font-weight:bold;color:#f8c26d;}
+#center_column span.price {font-weight:bold;color:#ffffff;}
 
 /* optional background color */
 #center_column .bgcolor,
@@ -304,7 +304,7 @@ input.exclusive:hover, a.exclusive:hover, input.exclusive_large:hover, a.exclusi
 #index .columns2 {padding:0;background:none;}
 #index .columns3 {padding:0;background:none;}
 
-#center_column {width:742px;float:left;}
+#center_column {width:100%;float:left; background:none repeat scroll 0 0 #000000; border:1px solid #252525;}
 #index #center_column {width:1024px;}
 
 #right_column {width:220px;float:left;margin:0 0 0 20px;}
@@ -316,7 +316,7 @@ footer {}
 
 
 /****************************************** hook top ******************************************/
-header {height:286px;position:relative;}
+header {height:246px;position:relative;}
 
 #header_logo {position:absolute;left:150px;top:10px; width:100%;}
 
@@ -988,8 +988,8 @@ footer {height:352px;margin:20px 0 0 0;}
 
 /* grid view */
 .grid {padding:10px 0 0 0;overflow:hidden; list-style:none;}
-.grid li {width:199px;float:left;margin:10px 10px 0 0;padding:20px;border-width:1px;border-style:solid;}
-.grid li.product_list-3 {width:198px;margin:10px 0 0 0;}
+.grid li {width:279px;float:left;margin:10px 10px 0 0;padding:20px;border-width:1px;border-style:solid;}
+.grid li.product_list-3 {margin:10px 0 0 0;}
 
 .grid li a.product_img_link {display:block;text-align:center;}
 
