@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2014-05-13 09:41:26
+<?php /* Smarty version Smarty-3.1.8, created on 2014-05-14 19:06:35
          compiled from "/var/www/prestashop/themes/theme504/modules/blockuserinfo/blockuserinfo.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:5490149545371be968ee791-06426693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13387615245373948b99e8f7-87339498%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9ade485ff99727426599994361d9f7a6655ee74f' => 
     array (
       0 => '/var/www/prestashop/themes/theme504/modules/blockuserinfo/blockuserinfo.tpl',
-      1 => 1399798727,
+      1 => 1400083591,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5490149545371be968ee791-06426693',
+  'nocache_hash' => '13387615245373948b99e8f7-87339498',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_5371be9693e478_71696793',
+  'unifunc' => 'content_5373948b9eaab0_34347226',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5371be9693e478_71696793')) {function content_5371be9693e478_71696793($_smarty_tpl) {?><!-- Block user information module HEADER -->
+<?php if ($_valid && !is_callable('content_5373948b9eaab0_34347226')) {function content_5373948b9eaab0_34347226($_smarty_tpl) {?><!-- Block user information module HEADER -->
 <?php if (!$_smarty_tpl->tpl_vars['PS_CATALOG_MODE']->value){?>
 <div id="shopping_cart">
 	<a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink(($_smarty_tpl->tpl_vars['order_process']->value),true);?>
@@ -45,6 +45,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</a>
 </div>
 <?php }?>
+
+<!-- 
 <ul id="header_user">
 	<li id="user_info">
 		<?php echo smartyTranslate(array('s'=>'Welcome','mod'=>'blockuserinfo'),$_smarty_tpl);?>
@@ -69,4 +71,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 "><?php echo smartyTranslate(array('s'=>'Your Account','mod'=>'blockuserinfo'),$_smarty_tpl);?>
 </a></li>
 </ul>
+ -->
 <!-- /Block user information module HEADER --><?php }} ?>
