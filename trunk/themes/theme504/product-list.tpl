@@ -1,5 +1,5 @@
 {if isset($products)}
-<ul id="product_list" class="bordercolor list">
+<ul id="product_list" class="bordercolor grid">
 	{foreach from=$products item=product name=products}
 	<li class="ajax_block_product bordercolor{if $smarty.foreach.products.iteration is div by 3} product_list-3{/if}">
 		<a href="{$product.link|escape:'htmlall':'UTF-8'}" class="product_img_link" title="{$product.name|escape:'htmlall':'UTF-8'}"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')}" alt="{$product.legend|escape:'htmlall':'UTF-8'}" /></a>
@@ -20,11 +20,13 @@
 			{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
             {if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}<span class="price">{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}</span>{/if}  
 			{/if}	
+			<!-- 
            {if isset($comparator_max_item) && $comparator_max_item}
 				<p class="compare checkbox">		
                 <input type="checkbox" class="comparator" id="comparator_item_{$product.id_product}" value="comparator_item_{$product.id_product}" {if isset($compareProducts) && in_array($product.id_product, 					$compareProducts)}checked="checked"{/if} /> 
 				<label for="comparator_item_{$product.id_product}">{l s='Select to compare'}</label></p>
 			{/if}
+			 -->
 			{if ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) && $product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 && $product.customizable != 2 && !$PS_CATALOG_MODE}
 				{if ($product.allow_oosp || $product.quantity > 0)}
 					{if isset($static_token)}
