@@ -9,6 +9,8 @@
 	</a>
 </div>
 {/if}
+
+<!-- 
 <ul id="header_user">
 	<li id="user_info">
 		{l s='Welcome' mod='blockuserinfo'}
@@ -21,4 +23,5 @@
 	</li>
 	<li id="your_account"><a href="{$link->getPageLink('my-account', true)}" title="{l s='Your Account' mod='blockuserinfo'}">{l s='Your Account' mod='blockuserinfo'}</a></li>
 </ul>
+ -->
 <!-- /Block user information module HEADER -->
