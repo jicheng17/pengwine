@@ -47,31 +47,6 @@
 {/if}
 <div id="wrapper1">
 <div id="wrapper2">
-<!--  
-<div id="topmenu">
-<div id="topmenu_center">
-	<ul class="sf-menu clearfix">
-		<li >
-			<a href="http://localhost/prestashop/index.php?id_category=3&controller=category&id_lang=1">CABERNET SAUVIGNON</a>
-			<ul><li >
-				<a href="http://localhost/prestashop/index.php?id_category=4&controller=category&id_lang=1">Lorem ipsum</a>
-				</li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=5&controller=category&id_lang=1">Dolor sit amet</a>
-				</li><li ><a href="http://localhost/prestashop/index.php?id_category=6&controller=category&id_lang=1">Conse ctetur</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=7&controller=category&id_lang=1">Adipisicing</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=8&controller=category&id_lang=1">Elit sed</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=9&controller=category&id_lang=1">Do eiusmod</a></li>
-				<li ><a href="http://localhost/prestashop/index.php?id_category=10&controller=category&id_lang=1">Tempor</a></li>
-			</ul>
-		</li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=11&controller=category&id_lang=1">SYRAH</a></li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=12&controller=category&id_lang=1">SHIRAZ</a></li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=13&controller=category&id_lang=1">PINOT NOIR</a></li>
-		<li ><a href="http://localhost/prestashop/index.php?id_category=14&controller=category&id_lang=1">BORDEAUX BLENDS</a></li>
-	</ul>
-</div>
-</div>
--->
 <div id="wrapper3" class="clearfix">
 <header id="header">
 	<a id="header_logo" href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}"><img class="logo" src="{$img_dir}logo.png?{$img_update_time}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" /></a>
