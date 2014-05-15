@@ -1,5 +1,6 @@
 {if $MENU != ''}
 <div id="topmenu">
+<div id="topmenu_center">
 	<ul class="sf-menu clearfix">
 		{$MENU}
 		{if $MENU_SEARCH}
@@ -12,5 +13,6 @@
 		</li>
 		{/if}
 	</ul>
+</div>
 </div>
 {/if}
