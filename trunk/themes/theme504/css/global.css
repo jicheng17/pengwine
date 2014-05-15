@@ -451,7 +451,7 @@ header #cart_block p#cart-buttons a.button_small {}
 
 /* blocktopmenu.tpl */
 #topmenu_center{
-width: 50%;
+width: 90%;
 margin: 0 auto;
 text-align: center;
 }
@@ -462,7 +462,7 @@ text-align: center;
 .sf-menu li {position:relative;}
 .sf-menu > li {float:left;}
 .sf-menu > li  + li {margin:0 0 0 14px;padding:0 0 0 16px;background:url(../img/top_menu_item.png) 0 0 no-repeat;}
-.sf-menu > li > a {height:52px;display:block;font:15px/50px "Georgia";color:#fff;text-decoration:none;text-transform:uppercase;}
+.sf-menu > li > a {height:52px;display:block;font:18px/50px "helvetica";color:#fff;text-decoration:none;/*text-transform:uppercase;*/}
 
 .sf-menu > li > a:hover,
 .sf-menu > li.sfHoverForce > a {color:#f8c26d;}

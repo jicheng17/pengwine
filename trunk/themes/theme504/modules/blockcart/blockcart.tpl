@@ -14,14 +14,17 @@ var freeShippingTranslation = '{l s='Free shipping!' mod='blockcart' js=1}';
 var freeProductTranslation = '{l s='Free!' mod='blockcart' js=1}';
 var delete_txt = '{l s='Delete' mod='blockcart'}';
 </script>
-<!-- MODULE Block cart -->
+<!-- 
 <div id="cart_block" class="block exclusive">
 	<h4>
 		<a href="{$link->getPageLink("$order_process", true)}">{l s='Cart' mod='blockcart'}</a>{*{if $ajax_allowed}<span id="block_cart_expand" {if isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded' || !isset($colapseExpandStatus)}class="hidden"{/if}>&nbsp;</span><span id="block_cart_collapse" {if isset($colapseExpandStatus) && $colapseExpandStatus eq 'collapsed'}class="hidden"{/if}>&nbsp;</span>{/if}*}
 	</h4>
+</div>	
+
+ 	
 	<div class="block_content">
 {*
-	<!-- block summary -->
+
 	<div id="cart_block_summary" class="{if isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded' || !$ajax_allowed || !isset($colapseExpandStatus)}collapsed{else}expanded{/if}">
 		<span class="ajax_cart_quantity" {if $cart_qties <= 0}style="display:none;"{/if}>{$cart_qties}</span>
 		<span class="ajax_cart_product_txt_s" {if $cart_qties <= 1}style="display:none"{/if}>{l s='products' mod='blockcart'}</span>
@@ -30,7 +33,7 @@ var delete_txt = '{l s='Delete' mod='blockcart'}';
 		<span class="ajax_cart_no_product" {if $cart_qties != 0}style="display:none"{/if}>{l s='(empty)' mod='blockcart'}</span>
 	</div>
 *}
-	<!-- block list of products -->
+
 	<div id="cart_block_list" class="{if isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded' || !$ajax_allowed || !isset($colapseExpandStatus)}expanded{else}collapsed{/if}">
 	{if $products}
 		<dl class="products">
@@ -56,7 +59,6 @@ var delete_txt = '{l s='Delete' mod='blockcart'}';
 				<a href="{$link->getProductLink($product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute)}" title="{l s='Product detail' mod='blockcart'}">{$product.attributes_small}</a>
 			{/if}
 
-			<!-- Customizable datas -->
 			{if isset($customizedDatas.$productId.$productAttributeId[$product.id_address_delivery])}
 				{if !isset($product.attributes_small)}<dd id="cart_block_combination_of_{$product.id_product}_{if $product.id_product_attribute}{$product.id_product_attribute}{else}0{/if}_{if $product.id_address_delivery}{$product.id_address_delivery}{else}0{/if}" class="{if $smarty.foreach.myLoop.first}first_item{elseif $smarty.foreach.myLoop.last}last_item{else}item{/if}">{/if}
 				<ul class="cart_block_customizations" id="customization_{$productId}_{$productAttributeId}">
@@ -142,4 +144,5 @@ var delete_txt = '{l s='Delete' mod='blockcart'}';
 	</div>
 	</div>
 </div>
+ -->
 <!-- /MODULE Block cart -->
