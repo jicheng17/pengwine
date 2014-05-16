@@ -176,7 +176,7 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 		</div>
 		{/if}
 		{if isset($images) && count($images) > 1}<p class="resetimg"  style="display:none;"><span id="wrapResetImages" style="display: none;"><img src="{$img_dir}icon/cancel_11x13.gif" alt="{l s='Cancel'}" width="11" height="13"/> <a id="resetImages" href="{$link->getProductLink($product)}" onclick="$('span#wrapResetImages').hide('slow');return (false);">{l s='Display all pictures'}</a></span></p>{/if}
-		<!-- usefull links-->
+		<!-- usefull links
 		<ul id="usefull_link_block" class="bordercolor">
 			{if $HOOK_EXTRA_LEFT}{$HOOK_EXTRA_LEFT}{/if}
 			<li class="print"><a href="javascript:print();">{l s='Print'}</a></li>
@@ -184,6 +184,7 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
             <li class="view-size"><span id="view_full_size" class="span_link">{l s='View full size'}</span></li>
 			{/if}
 		</ul>
+		-->
 	</div>
 
 	<!-- left infos-->
@@ -377,9 +378,12 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 			{if $product->description_short}
 				<div id="short_description_content" class="rte align_justify">{$product->description_short}</div>
 			{/if}
+			<!--  
 			{if $product->description}
 			<p class="buttons_bottom_block"><a href="javascript:{ldelim}{rdelim}" class="button">{l s='More details'}</a></p>
 			{/if}
+			 -->
+			 
 			{* pack content *}
 		{if $packItems|@count > 0}
 		<div class="pack_content bordercolor bgcolor">
@@ -470,7 +474,7 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 <div id="more_info_block">
 	<ul id="more_info_tabs" class="idTabs idTabsShort ">
 		{if $product->description}<li><a id="more_info_tab_more_info" href="#idTab1">{l s='More info'}</a></li>{/if}
-		{if $features}<li><a id="more_info_tab_data_sheet" href="#idTab2">{l s='Data sheet'}</a></li>{/if}
+		<!--  {if $features}<li><a id="more_info_tab_data_sheet" href="#idTab2">{l s='Data sheet'}</a></li>{/if}  -->
 		{if $attachments}<li><a id="more_info_tab_attachments" href="#idTab9">{l s='Download'}</a></li>{/if}
 		{if isset($accessories) AND $accessories}<li><a href="#idTab4">{l s='Accessories'}</a></li>{/if}
 		{$HOOK_PRODUCT_TAB}

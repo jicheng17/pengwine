@@ -32,14 +32,14 @@ body {font:normal 12px "Arial", Arial, Helvetica, sans-serif;color:#999;}
 .center_column a {color:#ffffff;text-decoration:underline;}
 .center_column a:hover {text-decoration:none;}
 
-#center_column h1 {margin:10px 0 0 0;padding:10px 20px;background:#8d0303;font:normal 18px "Georgia";color:#f8c26d;}
+#center_column h1 {margin:10px 0 0 0;padding:10px 20px;background:#8d0303;font:normal 18px "helvetica";color:#f8c26d;}
 #center_column h1 span {float:right;padding:3px 0 0 0;font:12px "Arial";color:#eee;text-transform:none;}
 
 .center_column h2,
 .center_column h3,
-.center_column h4 {padding:20px 0 0 0;font:bold 14px "Georgia";color:#8d0303;text-transform:uppercase;}
+.center_column h4 {padding:20px 0 0 0;font:bold 14px "helvetica";color:#8d0303;text-transform:uppercase;}
 
-a.product_link {font:13px "Georgia";color:#FFFFFF;text-decoration:none;text-transform:none !important;}
+a.product_link {font:13px "helvetica";color:#FFFFFF;text-decoration:none;text-transform:none !important;}
 a.product_link:hover {color:#FFFFFF;}
 
 a.product_descr {font:11px "Arial";color:#999;text-decoration:none;text-transform:none !important;}
@@ -61,7 +61,7 @@ table#cart_summary td.cart_total,
 
 /* optional background color */
 #center_column .bgcolor,
-#center_column table.std th {background-color:#1A1717;}
+#center_column table.std th {background-color:#000000;}
 
 /* footer links */
 ul.footer_links {height:16px;clear:both;padding:20px 0 0 0;}
@@ -251,7 +251,7 @@ a.button_mini, a.button_small, a.button, a.button_large,
 a.exclusive_mini, a.exclusive_small, a.exclusive, a.exclusive_large,
 span.button_mini, span.button_small, span.button, span.button_large,
 span.exclusive_mini, span.exclusive_small, span.exclusive, span.exclusive_large 
-{height:27px !important;display:inline-block;padding:0 10px;background:url(../img/bttns.png) 0 0 repeat-x;border:none;font:12px "Georgia" !important;color:#fff !important;text-decoration:none !important;cursor:pointer;}
+{height:27px !important;display:inline-block;padding:0 10px;background:url(../img/bttns.png) 0 0 repeat-x;border:none;font:12px "helvetica" !important;color:#fff !important;text-decoration:none !important;cursor:pointer;}
 
 /* link/span button */
 a.button_mini, a.button_small, a.button, a.button_large,
@@ -327,7 +327,7 @@ header {height:246px;position:relative;}
 #tmheaderlinks {position:absolute;left:0;top:11px;}
 #tmheaderlinks li {float:left;}
 #tmheaderlinks li + li {padding:0 0 0 14px;}
-#tmheaderlinks li a {font:italic 13px "Georgia";color:#fff;text-decoration:none;text-transform:capitalize;}
+#tmheaderlinks li a {font:italic 13px "helvetica";color:#fff;text-decoration:none;text-transform:capitalize;}
 
 #tmheaderlinks li a:hover,
 #tmheaderlinks li a.active {color:#f8c26d;}
@@ -337,24 +337,24 @@ header {height:246px;position:relative;}
 #languages_block_top {float:right;padding:11px 0 0 0;}
 #languages_block_top ul li {float:left;text-transform:uppercase;}
 #languages_block_top ul li + li {margin:0 0 0 7px;}
-#languages_block_top ul li a {display:block;font:italic 13px "Georgia";color:#c54545;text-decoration:none;}
+#languages_block_top ul li a {display:block;font:italic 13px "helvetica";color:#c54545;text-decoration:none;}
 #languages_block_top ul li a:hover {color:#fff;}
-#languages_block_top ul li.selected_language {font:italic 13px "Georgia";color:#fff;}
+#languages_block_top ul li.selected_language {font:italic 13px "helvetica";color:#fff;}
 
 
 /* blockcurrencies.tpl */
 #currencies_block_top {float:right;margin:11px 16px 0 0;position:relative;z-index:100;}
 
-#currencies_block_top label {display:block;float:left;padding:0 7px 0 0;font:italic 13px "Georgia";color:#c54545;}
+#currencies_block_top label {display:block;float:left;padding:0 7px 0 0;font:italic 13px "helvetica";color:#c54545;}
 #currencies_block_top select {display:none;}
 
 #currencies_block_top div.jqTransformSelectWrapper {width:100px !important;height:16px;float:left;}
-#currencies_block_top div.jqTransformSelectWrapper > div > span {width:95px !important;height:16px;display:block;float:left;padding:0 0 0 5px;background:url(../img/header_curr.png) right 0 no-repeat;font:italic 13px "Georgia";color:#c54545;cursor:pointer;}
+#currencies_block_top div.jqTransformSelectWrapper > div > span {width:95px !important;height:16px;display:block;float:left;padding:0 0 0 5px;background:url(../img/header_curr.png) right 0 no-repeat;font:italic 13px "helvetica";color:#c54545;cursor:pointer;}
 
 #currencies_block_top ul {width:100px !important;overflow:visible !important;position:absolute;right:0;top:18px;}
 #currencies_block_top ul li {height:auto;}
 #currencies_block_top ul li {height:auto;padding:1px 0 0 0;}
-#currencies_block_top ul li a {display:block;padding:0 0 0 5px;background:#f5f5f5;font:italic 11px/22px "Georgia";color:#aaa;text-decoration:none;}
+#currencies_block_top ul li a {display:block;padding:0 0 0 5px;background:#f5f5f5;font:italic 11px/22px "helvetica";color:#aaa;text-decoration:none;}
 
 #currencies_block_top ul li a:hover,
 #currencies_block_top ul li a.selected {background:#f8c26d;color:#c54545;}
@@ -367,8 +367,8 @@ header {height:246px;position:relative;}
 #shopping_cart a:hover span {color:#fff;}
 
 #header_user {position:absolute;right:0;top:88px;}
-#header_user li {float:left;font:italic 13px "Georgia";color:#fff;}
-#header_user li a {font:italic 13px "Georgia";text-decoration:none;}
+#header_user li {float:left;font:italic 13px "helvetica";color:#fff;}
+#header_user li a {font:italic 13px "helvetica";text-decoration:none;}
 #header_user li a:hover {}
 
 #header_user #user_info {}
@@ -376,7 +376,7 @@ header {height:246px;position:relative;}
 #header_user #user_info a:hover {color:#fff;}
 #header_user #user_info a.login {text-transform:lowercase;}
 #header_user #user_info a.logout {text-transform:lowercase;}
-#header_user #user_info a.account {font:italic bold 13px "Georgia";color:#f8c26d;}
+#header_user #user_info a.account {font:italic bold 13px "helvetica";color:#f8c26d;}
 #header_user #user_info a.account:hover {color:#fff;}
 
 #header_user #your_account {padding:0 0 0 22px;}
@@ -439,7 +439,7 @@ header #cart_block p#cart-buttons a.button_small {}
 /* blocksearch-top.tpl */
 #search_block_top {position:absolute;right:0;top:125px;}
 
-#search_block_top input.search_query {width:167px;height:32px;float:left;padding:0 5px;background:url(../img/header_search_input.png) 0 0 repeat-x;border:1px solid #9c0303;border-right:none;font:13px "Georgia";color:#fff;}
+#search_block_top input.search_query {width:167px;height:32px;float:left;padding:0 5px;background:url(../img/header_search_input.png) 0 0 repeat-x;border:1px solid #9c0303;border-right:none;font:13px "helvetica";color:#fff;}
 #search_block_top a {height:34px;display:block;float:left;padding:0 12px;background:url(../img/header_search_btn.png) 0 0 repeat-x;font:14px/34px "Vidaloka";color:#fff;text-decoration:none;text-transform:uppercase;}
 #search_block_top a:hover {background:#cea565;}
 
@@ -508,8 +508,8 @@ div.column > div {margin:20px 0 0 0;}
 
 div.column div.block {background:#fff;border:5px solid #e5e5e5;}
 
-div.column div.block h4 {padding:12px 0 0 15px;font:18px "Georgia";color:#8d0303;}
-div.column div.block h4 a {font:18px "Georgia";}
+div.column div.block h4 {padding:12px 0 0 15px;font:18px "helvetica";color:#8d0303;}
+div.column div.block h4 a {font:18px "helvetica";}
 div.column div.block h4 a:hover {}
 
 div.column div.block .block_content {padding:0 15px 15px 15px;}
@@ -522,7 +522,7 @@ div.column div.block ul.bullet li {padding:4px 0 0 12px;background:url(../img/bu
 .column .bordercolor {border-color:#e5e5e5 !important;}
 .column .pricecolor {}
 
-.column a.product_link {font:13px "Georgia";color:#830303;text-decoration:none;text-transform:none !important;}
+.column a.product_link {font:13px "helvetica";color:#830303;text-decoration:none;text-transform:none !important;}
 .column a.product_link:hover {color:#000;}
 
 .column a.product_descr {font:11px "Arial";color:#999;text-decoration:none;text-transform:none !important;}
@@ -731,8 +731,8 @@ margin: 0px auto 0px auto
 .nivo-caption > p {margin:0;padding:0;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader() !important;}
 .nivo-caption h2 {margin:0;padding:75px 0 0 0;font:65px "Vidaloka";color:#b7b4b3;text-transform:uppercase;}
 .nivo-caption h3 {margin:-19px 0 0 0;padding:0;font:55px "Vidaloka";color:#51423b;text-transform:uppercase;}
-.nivo-caption h4 {margin:-9px 0 0 0;padding:0;font:25px "Georgia";color:#830303;text-transform:uppercase;}
-.nivo-caption h5 {margin:0;padding:13px 0 0 0;font:italic 15px/19px "Georgia";color:#918884;text-transform:none;}
+.nivo-caption h4 {margin:-9px 0 0 0;padding:0;font:25px "helvetica";color:#830303;text-transform:uppercase;}
+.nivo-caption h5 {margin:0;padding:13px 0 0 0;font:italic 15px/19px "helvetica";color:#918884;text-transform:none;}
 .nivo-caption a.slide_btn {width:156px;height:50px;display:block;margin:27px 0 0 0;background:url(../img/slider_btn.png) 0 0 no-repeat;font:19px/50px "Vidaloka";color:#f8c26d;text-decoration:none;text-align:center;text-transform:uppercase;
 -webkit-box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.3);
         box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.3);
@@ -758,13 +758,13 @@ margin: 0px auto 0px auto
 #tmspecials ul li div {width:170px;float:left;}
 
 #tmspecials ul li div h5 {padding:32px 0 0 0;text-transform:none;}
-#tmspecials ul li div h5 a {font:25px "Georgia";color:#000;text-decoration:none;}
+#tmspecials ul li div h5 a {font:25px "helvetica";color:#000;text-decoration:none;}
 #tmspecials ul li div h5 a:hover {color:#830303;}
 
 #tmspecials ul li div span.price {display:block;padding:9px 0 0 0;font:normal 46px "Vidaloka";}
 
 #tmspecials ul li div p {height:56px;padding:5px 0 0 0;}
-#tmspecials ul li div p a {font:italic 15px/19px "Georgia";color:#7a6e69;text-decoration:none;}
+#tmspecials ul li div p a {font:italic 15px/19px "helvetica";color:#7a6e69;text-decoration:none;}
 #tmspecials ul li div p a:hover {color:#830303;}
 
 #tmspecials ul li div a.tmsp_btn {width:104px;height:39px;display:block;margin:14px 0 0 0;background:url(../img/tmsp_btn.png) 0 0 no-repeat;font:14px/40px "Vidaloka";color:#f8c26d;text-decoration:none;text-align:center;text-transform:uppercase;
@@ -779,7 +779,7 @@ margin: 0px auto 0px auto
 -webkit-box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
         box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
-#featured_products h4 {height:34px;padding:24px 0 0 20px;background:url(../img/feat_title.png) 0 0 no-repeat;font:normal 15px "Georgia";color:#434343;text-transform:uppercase;}
+#featured_products h4 {height:34px;padding:24px 0 0 20px;background:url(../img/feat_title.png) 0 0 no-repeat;font:normal 15px "helvetica";color:#434343;text-transform:uppercase;}
 
 #featured_products .block_content {background:url(../img/feat_mid.png) 0 0 repeat-y;}
 
@@ -846,34 +846,34 @@ footer {height:352px;margin:20px 0 0 0;}
 /* tmtextblock.tpl */
 #tmtextblock {padding:9px 19px;background:#f2f2f2;overflow:hidden;}
 #tmtextblock h2 {font:25px "Vidaloka";color:#830303;text-transform:uppercase;}
-#tmtextblock h2 span {margin:0 0 0 7px;font:15px "Georgia";color:#a5a5a5;text-transform:uppercase;}
+#tmtextblock h2 span {margin:0 0 0 7px;font:15px "helvetica";color:#a5a5a5;text-transform:uppercase;}
 
 
 /* tmfooterlinks.tpl */
 #tmfooterlinks {float:left;padding:20px 0 0 0;text-transform:uppercase;position:relative;}
 #tmfooterlinks div {width:214px;float:left;padding:0 20px 0 10px;}
 #tmfooterlinks div + div {height:155px;padding:0 20px;border-left:1px solid #e5e5e5;}
-#tmfooterlinks div h4 {padding:12px 0 10px 0;font:15px "Georgia";color:#434343;}
+#tmfooterlinks div h4 {padding:12px 0 10px 0;font:15px "helvetica";color:#434343;}
 
 #tmfooterlinks div ul {}
 #tmfooterlinks div ul li {padding:4px 0 0 0;}
 #tmfooterlinks div ul li + li {}
-#tmfooterlinks div ul li a {font:11px "Georgia";color:#830303;}
+#tmfooterlinks div ul li a {font:11px "helvetica";color:#830303;}
 #tmfooterlinks div ul li a:hover {color:#c69e5f;}
 
-#tmfooterlinks p {width:992px;padding:9px 0 0 12px;border-top:1px solid #e4e4e4;font:11px "Georgia";color:#7a6e69;position:absolute;left:0;top:194px;}
-#tmfooterlinks p a {font:11px "Georgia";color:#7a6e69;}
+#tmfooterlinks p {width:992px;padding:9px 0 0 12px;border-top:1px solid #e4e4e4;font:11px "helvetica";color:#7a6e69;position:absolute;left:0;top:194px;}
+#tmfooterlinks p a {font:11px "helvetica";color:#7a6e69;}
 #tmfooterlinks p a:hover {color:#830303;}
 
 
 /* blockcontactinfos.tpl */
 #block_contact_infos {width:208px;height:155px;float:left;margin:20px 0 0 0;padding:0 20px;border-left:1px solid #e5e5e5;}
-#block_contact_infos h4 {padding:12px 0 10px 0;font:15px "Georgia";color:#434343;text-transform:uppercase;}
+#block_contact_infos h4 {padding:12px 0 10px 0;font:15px "helvetica";color:#434343;text-transform:uppercase;}
 
 #block_contact_infos ul {}
 #block_contact_infos ul li {}
 #block_contact_infos ul li.contact_infos_company {display:none;}
-#block_contact_infos ul li.contact_infos_address {padding:2px 0 0 0;font:italic 14px "Georgia";color:#7a6e69;}
+#block_contact_infos ul li.contact_infos_address {padding:2px 0 0 0;font:italic 14px "helvetica";color:#7a6e69;}
 #block_contact_infos ul li.contact_infos_phone {padding:11px 0 0 0;font:18px "Vidaloka";color:#830303;}
 #block_contact_infos ul li.contact_infos_email {display:none;}
 
@@ -1171,7 +1171,7 @@ span#wrapResetImages div {width:306px;margin:0 0 -3px 0;padding:17px 0 10px 20px
 
 /* right block */
 #primary_block #pb-left-column {width:416px;float:left;padding:0 0 0 20px;}
-#primary_block #pb-left-column h1 {margin:-4px 0 0 0;padding:0;background:none;border:none;font-size:20px;color:#333;text-transform:none;}
+#primary_block #pb-left-column h1 {margin:-4px 0 0 0;padding:0;background:none;border:none;font-size:20px;color:#FFF;text-transform:none;}
 
 #buy_block {margin:20px 0 0 0;border-width:1px 0 0 0;border-style:solid;}
 #buy_block p {}
@@ -1337,7 +1337,7 @@ span#wrapResetImages div {width:306px;margin:0 0 -3px 0;padding:17px 0 10px 20px
 
 
 /* share block */
-#pb-left-column .share {margin:20px 0 0 0;padding:10px;overflow:hidden;background:url(../img/gradient_light.png) 0 bottom repeat-x #fff;border-width:1px 0;border-style:solid;line-height:normal;}
+#pb-left-column .share {margin:20px 0 0 0;padding:10px;overflow:hidden;/* background:url(../img/gradient_light.png) 0 bottom repeat-x #fff */;border-width:1px 0;border-style:solid;line-height:normal;}
 #pb-left-column .share a {text-decoration:none;height:20px;}
 .addthis_button_google_plusone {width:64px !important;}
 .addthis_button_tweet.at300b {width:82px;}
@@ -1384,7 +1384,7 @@ ul.idTabsShort li a.selected {}
 
 
 /* tabs content blocks */
-#more_info_sheets {border-width:1px;border-style:solid;}
+#more_info_sheets { /* border-width:1px;border-style:solid; */}
 
 #idTab1 strong {font-weight:bold;}
 
@@ -1664,7 +1664,7 @@ ul.address li.address_title h3 {margin:0;}
 ul.address li span.address_name,
 ul.address li span.address_firstname,
 ul.address li span.address_lastname,
-ul.address li.address_firstname {font-weight:bold;color:#333;}
+ul.address li.address_firstname {font-weight:bold;color:#FFF;}
 
 ul.address li.address_update,
 ul.address li.address_delete {}
