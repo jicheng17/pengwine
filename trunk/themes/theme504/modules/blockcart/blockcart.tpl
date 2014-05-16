@@ -14,6 +14,9 @@ var freeShippingTranslation = '{l s='Free shipping!' mod='blockcart' js=1}';
 var freeProductTranslation = '{l s='Free!' mod='blockcart' js=1}';
 var delete_txt = '{l s='Delete' mod='blockcart'}';
 </script>
+
+<div id="cart_block" class="block exclusive">
+</div>
 <!-- 
 <div id="cart_block" class="block exclusive">
 	<h4>

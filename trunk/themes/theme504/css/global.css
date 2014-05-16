@@ -305,6 +305,8 @@ input.exclusive:hover, a.exclusive:hover, input.exclusive_large:hover, a.exclusi
 #index .columns3 {padding:0;background:none;}
 
 #center_column {width:100%;float:left; background:none repeat scroll 0 0 #000000; border:1px solid #252525;}
+#center_column_home {background-color:transparent;}
+
 #index #center_column {width:1024px;}
 
 #right_column {width:220px;float:left;margin:0 0 0 20px;}
@@ -383,7 +385,7 @@ header {height:246px;position:relative;}
 
 
 /* blockcart.tpl */
-header #cart_block {width:200px;height:auto;background:#fff;border:5px solid #ddd;position:absolute;right:-15px;top:85px;z-index:999;display:none;}
+header #cart_block {width:200px;height:auto;background:#000;border:5px solid #ddd;position:absolute;right:-15px;top:85px;z-index:-2;display:none;}
 
 header #cart_block h4,
 header #cart_block #cart_block_summary,
