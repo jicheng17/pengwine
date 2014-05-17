@@ -1835,3 +1835,28 @@ a.color-myaccount {color:#8d0303;}
 /* 404.tpl */
 p.error404 {border:2px solid #dd0000;background:#f5f5f5;margin:20px 0 0 0;padding:10px;line-height:32px;}
 p.error404 img {margin:0 10px 0 0;}
+
+#contactus p {
+	margin: 15px 10px 10px 10px;
+	padding: 10px;
+	}
+#contactus h3 {
+	padding: 20px 0 0 0;
+	font: bold 14px "helvetica";
+	color: #999;
+	text-transform: uppercase;
+}
+
+#aboutus h3{
+	padding: 20px 0 0 0;
+	font: bold 14px "helvetica";
+	color: #999;
+	text-transform: uppercase;
+}
+
+.aboutbg{
+background: url(../img/about-page-sptr.jpg) no-repeat bottom center;
+width: 848px;
+margin: 0 auto;
+padding: 10px 0px 19px 0px;
+}
