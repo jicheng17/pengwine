@@ -50,11 +50,13 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 {/if}
 
+<!--  
 {if !$opc}
 	<h1>{l s='Shipping'}</h1>
 {else}
 	<h2><span>2</span> {l s='Delivery methods'}</h2>
 {/if}
+-->
 
 {if !$opc}
 {assign var='current_step' value='shipping'}
@@ -72,7 +74,7 @@
 {if isset($virtual_cart) && $virtual_cart}
 	<input id="input_virtual_carrier" class="hidden" type="hidden" name="id_carrier" value="0" />
 {else}
-	<h3 class="carrier_title">{l s='Choose your delivery method'}</h3>
+	<!--  <h3 class="carrier_title">{l s='Choose your delivery method'}</h3>  -->
 	
 	<div id="HOOK_BEFORECARRIER">
 		{if isset($carriers) && isset($HOOK_BEFORECARRIER)}
@@ -82,15 +84,20 @@
 	{if isset($isVirtualCart) && $isVirtualCart}
 	<p class="warning">{l s='No carrier needed for this order'}</p>
 	{else}
+	
+	<!--  
 	{if $recyclablePackAllowed}
 	<p class="checkbox">
 		<input type="checkbox" name="recyclable" id="recyclable" value="1" {if $recyclable == 1}checked="checked"{/if} />
 		<label for="recyclable">{l s='I agree to receive my order in recycled packaging'}.</label>
 	</p>
 	{/if}
+	 -->
+	
 	<div class="delivery_options_address">
 	{if isset($delivery_option_list)}
 		{foreach $delivery_option_list as $id_address => $option_list}
+			<!--  
 			<h3>
 				{if isset($address_collection[$id_address])}
 					{l s='Choose a shipping option for this address:'} {$address_collection[$id_address]->alias}
@@ -98,6 +105,8 @@
 					{l s='Choose a shipping option'}
 				{/if}
 			</h3>
+			 -->
+			 
 			<div class="delivery_options">
 			{foreach $option_list as $key => $option}
 				<div class="delivery_option {if ($option@index % 2)}alternate_{/if}item">
@@ -156,6 +165,7 @@
 						</table>
 				<table id="carrierTable" class="delivery_option_carrier std {if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key}selected{/if} {if $option.unique_carrier}not-displayable{/if}">
 							{foreach $option.carrier_list as $carrier}
+							<!--  
 							<tr>
 								{if !$option.unique_carrier}
 								<td class="first_item">
@@ -181,7 +191,14 @@
 										{foreach $carrier.product_list as $product}
 										{if $product@index == 4}<acronym title="{/if}{if $product@index >= 4}{$product.name}{if !$product@last}, {else}">...</acronym>){/if}{else}{$product.name}{if !$product@last}, {else}){/if}{/if}{/foreach}
 									{/if}
+									
 								</td>
+							</tr>
+							 -->
+							<tr>
+								<p>		
+									<a href="index.php?id_cms=8&controller=cms&id_lang=1">Please read our Shipping Policy</a>
+								</p>
 							</tr>
 						{/foreach}
 						</table>
@@ -208,7 +225,7 @@
 	
 	</div>
 	<div style="display: none;" id="extra_carrier"></div>
-	
+		<!--  
 		{if $giftAllowed}
 		<h3 class="gift_title">{l s='Gift'}</h3>
 		<p class="checkbox">
@@ -228,13 +245,15 @@
 			<textarea rows="5" cols="35" id="gift_message" name="gift_message">{$cart->gift_message|escape:'htmlall':'UTF-8'}</textarea>
 		</p>
 		{/if}
+		 -->
 	{/if}
 {/if}
 {if $conditions AND $cms_id}
-	<h3 class="condition_title">{l s='Terms of service'}</h3>
+	<!--  <h3 class="condition_title">{l s='Terms of service'}</h3>  -->
 	<p class="checkbox">
 		<input type="checkbox" name="cgv" id="cgv" value="1" {if $checkedTOS}checked="checked"{/if} />
-		<label for="cgv">{l s='I agree to the Terms of Service and will adhere to them unconditionally.'}</label> <a href="{$link_conditions}" class="iframe">{l s='(Read Terms of Service)'}</a>
+		<label for="cgv">{l s='I agree to the Terms of Service and will adhere to them unconditionally.'}</label> 
+		<a href="{$link_conditions}" class="iframe">{l s='(Terms of Service)'}</a>
 	</p>
 	<script type="text/javascript">$('a.iframe').fancybox();</script>
 {/if}
