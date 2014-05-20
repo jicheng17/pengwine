@@ -1170,10 +1170,10 @@ span#wrapResetImages div {width:306px;margin:0 0 -3px 0;padding:17px 0 10px 20px
 
 
 /* right block */
-#primary_block #pb-left-column {width:416px;float:left;padding:0 0 0 20px;}
+#primary_block #pb-left-column {width:635px;float:left;padding:0 0 0 20px;}
 #primary_block #pb-left-column h1 {margin:-4px 0 0 0;padding:0;background:none;border:none;font-size:20px;color:#FFF;text-transform:none;}
 
-#buy_block {margin:20px 0 0 0;border-width:1px 0 0 0;border-style:solid;}
+#buy_block {margin:20px 0 0 0;border-width:1px 0 0 0;border-style:solid; font-family: "helvetica";}
 #buy_block p {}
 
 
@@ -1242,7 +1242,11 @@ span#wrapResetImages div {width:306px;margin:0 0 -3px 0;padding:17px 0 10px 20px
 
 
 /* short description */
-#primary_block #short_description_block {margin:20px 0 0 0;border-width:1px 0 0 0;border-style:solid;}
+#primary_block #short_description_block {margin:20px 0 0 0;border-width:1px 0 0 0;border-style:solid;font:"helvetica" }
+#short_description_block h2{ color:#999; }
+#short_description_block h3{ color:#999; }
+#short_description_block p{ font:"helvetica"; }
+
 
 #primary_block #short_description_content,
 #primary_block #short_description_content p {margin:17px 0 0 0;padding:0;}
@@ -1863,4 +1867,19 @@ background: url(../img/about-page-sptr.jpg) no-repeat bottom center;
 width: 848px;
 margin: 0 auto;
 padding: 10px 0px 19px 0px;
+}
+
+/* our wines */
+.blog-featured .items-row, .blog .items-row {
+margin: 0 0 20px;
+padding: 26px 20px 0;
+}
+
+.items-row {
+border-top: 0px solid #eee;
+}
+
+.item {
+float: left;
+position: relative;
 }
