@@ -197,7 +197,7 @@
 							 -->
 							<tr>
 								<p>		
-									<a href="index.php?id_cms=8&controller=cms&id_lang=1">Please read our Shipping Policy</a>
+									<a href="index.php?id_cms=8&controller=cms&id_lang=1" target="_blank">Please read our Shipping Policy</a>
 								</p>
 							</tr>
 						{/foreach}

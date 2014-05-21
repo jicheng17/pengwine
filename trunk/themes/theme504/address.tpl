@@ -44,7 +44,7 @@ $(function(){ldelim}
 {capture name=path}{l s='Your addresses'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
-<h1>{l s='Your addresses'}</h1>
+<!--  <h1>{l s='Your addresses'}</h1>  -->
 
 <h3>
 {if isset($id_address) && (isset($smarty.post.alias) || isset($address->alias))}
