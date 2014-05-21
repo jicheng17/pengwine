@@ -1,3 +1,4 @@
+{if $id_category==5}
 {if isset($products)}
 <ul id="product_list" class="bordercolor grid">
 	{foreach from=$products item=product name=products}
@@ -42,7 +43,38 @@
 		</div>
 	</li>
 	{/foreach}
-    <script>
+   
+</ul>
+{/if}
+
+{else}
+	<ul id="product_list" class="bordercolor grid">
+	{foreach from=$products item=product name=products}
+	<li class="ajax_block_product bordercolor{if $smarty.foreach.products.iteration is div by 3} product_list-3{/if}">
+		<a href="{$product.link|escape:'htmlall':'UTF-8'}" class="product_img_link" title="{$product.name|escape:'htmlall':'UTF-8'}"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')}" alt="{$product.legend|escape:'htmlall':'UTF-8'}" /></a>
+		<div class="center_block">
+			<div class="product_flags">
+				{if isset($product.new) && $product.new == 1}<span class="new">{l s='New'}!</span>{/if}
+				{if isset($product.available_for_order) && $product.available_for_order && !isset($restricted_country_mode)}
+                {if ($product.allow_oosp || $product.quantity > 0)}<span class="availability bordercolor">{l s='Available'}
+                {elseif (isset($product.quantity_all_versions) && $product.quantity_all_versions > 0)}<span class="bordercolor">{l s='Product available with different options'}</span>{else}<span class="bordercolor">{l s='Out of stock'}</span>{/if}</span>{/if}
+				{if isset($product.online_only) && $product.online_only}<span class="online_only bordercolor">{l s='Online only!'}</span>{/if}
+			</div>
+			<h3><a class="product_link" href="{$product.link|escape:'htmlall':'UTF-8'}" title="{$product.name|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'|truncate:45:'...'}</a></h3>
+			<p class="product_desc" style="display:block;">
+				{$product.description_short|strip_tags:'UTF-8'|truncate:320}
+			</p>
+			<p>
+				<a class="product_descr" href="{$product.link|escape:'htmlall':'UTF-8'}" title="{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}" >Read more...</a>
+			</p>
+		</div>																				 
+	</li>
+	{/foreach}
+   
+</ul>
+{/if}
+
+ <script>
     (function($) {
 $(function() {
 	function createCookie(name,value,days) {
@@ -85,5 +117,3 @@ $(function() {
 })
 })(jQuery)
     </script>
-</ul>
-{/if}

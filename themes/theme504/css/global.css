@@ -32,7 +32,7 @@ body {font:normal 12px "helvetica", helvetica, Helvetica, sans-serif;color:#999;
 .center_column a {color:#ffffff;text-decoration:underline;}
 .center_column a:hover {text-decoration:none;}
 
-#center_column h1 {margin:10px 0 0 0;padding:10px 20px;background:#8d0303;font:normal 18px "helvetica";color:#f8c26d;}
+#center_column h1 {margin:10px 0 0 0;padding:10px 20px;background:#000;font:normal 18px "helvetica";color:#f8c26d;}
 #center_column h1 span {float:right;padding:3px 0 0 0;font:12px "helvetica";color:#eee;text-transform:none;}
 
 .center_column h2,
@@ -42,8 +42,8 @@ body {font:normal 12px "helvetica", helvetica, Helvetica, sans-serif;color:#999;
 a.product_link {font:13px "helvetica";color:#FFFFFF;text-decoration:none;text-transform:none !important;}
 a.product_link:hover {color:#FFFFFF;}
 
-a.product_descr {font:11px "helvetica";color:#999;text-decoration:none;text-transform:none !important;}
-a.product_descr:hover {color:#000;}
+a.product_descr {font:13px "helvetica";color:#fff;text-decoration:none;text-transform:none !important; padding:3px 3px 3px 3px;}
+a.product_descr:hover {color:#999;} 
 
 /* global border color */
 /* #center_column .bordercolor, */

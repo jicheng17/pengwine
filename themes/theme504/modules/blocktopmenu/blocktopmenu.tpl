@@ -1,17 +1,22 @@
 {if $MENU != ''}
 <div id="topmenu">
 <div id="topmenu_center"><!-- Menu -->
+
 <div class="sf-contener clearfix">
 <ul class="sf-menu clearfix sf-js-enabled sf-shadow">
 	<li><a href="index.php">Home</a></li>
 	<li><a href="index.php?id_cms=6&amp;controller=cms&amp;id_lang=1">About
 	Us</a></li>
-	<li class=""><a href="index.php?id_cms_category=3&amp;controller=cms"
+	<li class=""><a
+		href="index.php?id_category=12&amp;controller=category&amp;id_lang=1"
 		class="sf-with-ul">Our Wines<span class="sf-sub-indicator"> »</span></a>
 	<ul style="display: none; visibility: hidden;">
-		<li><a href="index.php?id_cms=10&amp;controller=cms">Premium</a></li>
-		<li><a href="index.php?id_cms=11&amp;controller=cms">Reserve</a></li>
-		<li><a href="index.php?id_cms=12&amp;controller=cms">Varietal</a></li>
+		<li class="sfHoverForce"><a
+			href="index.php?id_category=21&amp;controller=category&amp;id_lang=1">Premium</a></li>
+		<li><a
+			href="index.php?id_category=22&amp;controller=category&amp;id_lang=1">Reserve</a></li>
+		<li><a
+			href="index.php?id_category=23&amp;controller=category&amp;id_lang=1">Varietal</a></li>
 	</ul>
 	</li>
 	<li><a href="index.php?id_category=3&amp;controller=category"
@@ -22,15 +27,17 @@
 	</li>
 	<li><a href="index.php?id_cms=7&amp;controller=cms&amp;id_lang=1">Contact
 	Us</a></li>
-	<li><a href="index.php?id_category=11&amp;controller=category"
+	<li class=""><a
+		href="http://pengwine.us/index.php?id_category=11&amp;controller=category&amp;id_lang=1"
 		class="sf-with-ul">Specials<span class="sf-sub-indicator"> »</span></a>
 	<ul style="display: none; visibility: hidden;">
-		<li><a href="index.php?id_category=24&amp;controller=category">US
+		<li class="sfHoverForce"><a
+			href="http://pengwine.us/index.php?id_category=20&amp;controller=category&amp;id_lang=1">US
 		Specials</a></li>
 	</ul>
 	</li>
 
- 	<div
+	<div
 		style="float: right; height: 0pt; margin-right: 10px; position: relative; top: 5px;"
 		id="icons">
 	<div class="smile" style="text-align: right"><a rel="nofollow"
@@ -47,18 +54,18 @@
 		src="http://pengwine.com/modules/mod_socialmedialinks/icons/youtube.png "
 		alt="Youtube" title="Follow us on Youtube"></a>
 	<div class="smilecredits"
-		style="text-align: text-align :       right; margin: 0px 2 0px 2;"></div>
+		style="text-align: text-align :           right; margin: 0px 2 0px 2;"></div>
 	</div>
 	<div class="clr"></div>
 
 	</div>
-	
+
 
 </ul>
 
 
 
-<!--  
+<!-- 
 <ul class="sf-menu clearfix">
 	{$MENU} {if $MENU_SEARCH}
 	<li class="sf-search noBack">
@@ -70,10 +77,9 @@
 	</li>
 	{/if}
 </ul>
- --></div>
- 
+ -->
 
-	
+</div>
 </div>
 </div>
 {/if}
