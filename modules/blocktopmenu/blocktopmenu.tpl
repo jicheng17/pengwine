@@ -1,8 +1,8 @@
 {if $MENU != ''}
 	</div>
 
-	<!-- Menu -->
-	<div class="sf-contener clearfix">
+
+	
 		<ul class="sf-menu clearfix">
 			{$MENU}
 			{if $MENU_SEARCH}
