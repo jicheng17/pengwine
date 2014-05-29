@@ -320,7 +320,7 @@ footer {}
 /****************************************** hook top ******************************************/
 header {height:246px;position:relative;}
 
-#header_logo {position:absolute;left:150px;top:10px; width:100%;}
+#header_logo {position:absolute;top:10px; width:100%; text-align:center;}
 
 
 /* tmheaderlinks.tpl */
