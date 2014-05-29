@@ -37,7 +37,7 @@ body {font:normal 12px "helvetica", helvetica, Helvetica, sans-serif;color:#999;
 
 .center_column h2,
 .center_column h3,
-.center_column h4 {padding:20px 0 0 0;font:bold 14px "helvetica";color:#8d0303;text-transform:uppercase;}
+.center_column h4 {padding:20px 0 0 0;font:bold 14px "helvetica";color:#fff; /*text-transform:uppercase;*/}
 
 a.product_link {font:13px "helvetica";color:#FFFFFF;text-decoration:none;text-transform:none !important;}
 a.product_link:hover {color:#FFFFFF;}
@@ -251,7 +251,7 @@ a.button_mini, a.button_small, a.button, a.button_large,
 a.exclusive_mini, a.exclusive_small, a.exclusive, a.exclusive_large,
 span.button_mini, span.button_small, span.button, span.button_large,
 span.exclusive_mini, span.exclusive_small, span.exclusive, span.exclusive_large 
-{height:27px !important;display:inline-block;padding:0 10px;background:url(../img/bttns.png) 0 0 repeat-x;border:none;font:12px "helvetica" !important;color:#fff !important;text-decoration:none !important;cursor:pointer;}
+{width:105px; height:27px !important;display:inline-block;padding:10 10px;background:url(../img/bttns.png) 0 0 repeat-x;border:solid #00a000 1px;font:14px "helvetica" !important;color:#fff !important;text-decoration:none !important;cursor:pointer; text-align: center;}
 
 /* link/span button */
 a.button_mini, a.button_small, a.button, a.button_large,

@@ -190,7 +190,7 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 	<!-- left infos-->
 	<div id="pb-left-column">
 		<h1>{$product->name|escape:'htmlall':'UTF-8'}</h1>
-
+		<h4>{$product->reference}</h4>
 
 		{*{if isset($colors) && $colors}
 		<!-- colors -->
