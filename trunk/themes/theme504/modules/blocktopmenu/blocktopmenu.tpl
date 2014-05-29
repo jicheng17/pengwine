@@ -8,7 +8,7 @@
 	<li><a href="index.php?id_cms=6&amp;controller=cms&amp;id_lang=1">About
 	Us</a></li>
 	<li class=""><a
-		href="index.php?id_category=12&amp;controller=category&amp;id_lang=1"
+		href="#"
 		class="sf-with-ul">Our Wines<span class="sf-sub-indicator"> »</span></a>
 	<ul style="display: none; visibility: hidden;">
 		<li class="sfHoverForce"><a
@@ -19,7 +19,7 @@
 			href="index.php?id_category=23&amp;controller=category&amp;id_lang=1">Varietal</a></li>
 	</ul>
 	</li>
-	<li><a href="index.php?id_category=3&amp;controller=category"
+	<li><a href="#"
 		class="sf-with-ul">PengWine Shop<span class="sf-sub-indicator"> »</span></a>
 	<ul style="display: none; visibility: hidden;">
 		<li><a href="index.php?id_category=5&amp;controller=category">US Shop</a></li>
@@ -28,7 +28,7 @@
 	<li><a href="index.php?id_cms=7&amp;controller=cms&amp;id_lang=1">Contact
 	Us</a></li>
 	<li class=""><a
-		href="http://pengwine.us/index.php?id_category=11&amp;controller=category&amp;id_lang=1"
+		href="#"
 		class="sf-with-ul">Specials<span class="sf-sub-indicator"> »</span></a>
 	<ul style="display: none; visibility: hidden;">
 		<li class="sfHoverForce"><a
