@@ -83,6 +83,7 @@
 		
 		<div id="availableCarriers" style="display: none;">
 			<table cellspacing="0" cellpadding="0" id="availableCarriers_table" class="std">
+			<!-- 
 				<thead>
 					<tr>
 						<th class="carrier_action first_item"></th>
@@ -91,6 +92,7 @@
 						<th class="carrier_price last_item">{l s='Price' mod='carriercompare'}</th>
 					</tr>
 				</thead>
+				 -->
 				<tbody id="carriers_list">
 					
 				</tbody>
@@ -98,10 +100,12 @@
 		</div>
 		<p class="warning center" id="noCarrier" style="display: none;">{l s='No carrier is available for this selection' mod='carriercompare'}</p>
 		
+		<!--  
 		<p class="SE_SubmitRefreshCard">
 			<input class="exclusive_large" id="carriercompare_submit" type="submit" name="carriercompare_submit" value="{l s='Update Cart' mod='carriercompare'}"/>
 			<input id="update_carriers_list" type="button" class="exclusive_large" value="{l s='Update carrier list' mod='carriercompare'}" />
 		</p>
+		 -->
 	</fieldset>
 </form>
 {/if}
