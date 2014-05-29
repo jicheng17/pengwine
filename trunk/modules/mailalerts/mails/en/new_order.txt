@@ -9,7 +9,6 @@ Payment: {payment}
 Discounts: {total_discounts}
 Shipping: {total_shipping}
 Products: {total_products}
-Gift-wrapping: {total_wrapping}
 Total paid: {total_paid}
 
 Delivery address:
@@ -26,4 +25,4 @@ Customer message:
 
 
 
-{shop_url} powered by PrestaShop™
+{shop_url} powered by PrestaShop���
