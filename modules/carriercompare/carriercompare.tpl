@@ -71,6 +71,7 @@
 		
 		<div id="availableCarriers" style="display: none;">
 			<table cellspacing="0" cellpadding="0" id="availableCarriers_table" class="std">
+			<!-- 
 				<thead>
 					<tr>
 						<th class="carrier_action first_item"></th>
@@ -82,6 +83,7 @@
 				<tbody id="carriers_list">
 					
 				</tbody>
+				 -->
 			</table>
 		</div>
 		<p class="warning center" id="noCarrier" style="display: none;">{l s='No carrier is available for this selection' mod='carriercompare'}</p>
