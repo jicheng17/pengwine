@@ -1732,7 +1732,7 @@ ul.step5 {background-position:0 -224px;}
 
 #cart_summary #total_price,
 #cart_summary #total_price span,
-#cart_summary .total_price_container {background:#8d0303;color:#fff !important;}
+#cart_summary .total_price_container {/* background:#8d0303; */color:#fff !important;}
 
 
 /* voucher form */
