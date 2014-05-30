@@ -78,9 +78,9 @@
 			<tr class="cart_total_voucher" {if $total_discounts == 0}style="display:none"{/if}>
 				<td colspan="5">
 				{if $use_taxes && $display_tax_label}
-					{l s='Total vouchers (tax excl.):'}
+					{l s='Total discount (tax excl.):'}
 				{else}
-					{l s='Total vouchers:'}
+					{l s='Total discount:'}
 				{/if}
 				</td>
 				<td colspan="2" class="price-discount price" id="total_discount">
@@ -279,7 +279,7 @@
 					{/if}
 					<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
 				<fieldset class="bordercolor">
-							<h2><label for="discount_name">{l s='Vouchers'}</label></h2>
+							<h2><label for="discount_name">{l s='Vouchers or Promotion code'}</label></h2>
 							<p>
 								<input type="text" class="discount_name" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
 							</p>
