@@ -95,12 +95,12 @@
 				<td colspan="5">
 				{if $use_taxes}
 					{if $priceDisplay}
-						{if $display_tax_label}{l s='Total vouchers (tax excl.):'}{else}{l s='Total vouchers:'}{/if}
+						{if $display_tax_label}{l s='Total discount (tax excl.):'}{else}{l s='Total discount:'}{/if}
 					{else}
-						{if $display_tax_label}{l s='Total vouchers (tax incl.):'}{else}{l s='Total vouchers:'}{/if}
+						{if $display_tax_label}{l s='Total discount (tax incl.):'}{else}{l s='Total discount:'}{/if}
 					{/if}
 				{else}
-					{l s='Total vouchers:'}
+					{l s='Total discount:'}
 				{/if}
 				</td>
 				<td class="price-discount price" id="total_discount">
