@@ -180,7 +180,7 @@
 					<label for="optin">{l s='Receive special offers from our partners'}</label>
 				</p>
 				{/if}
-				<h3>{l s='Delivery address'}</h3>
+				<h3>{l s='Delivery address (Address should be the same as credit address)'}</h3>
 				{$stateExist = false}
 				{foreach from=$dlv_all_fields item=field_name}
 				{if $field_name eq "company"}
