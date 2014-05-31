@@ -1,4 +1,5 @@
 <script type="text/javascript" src="{$this_path}js/nivo.slider.js"></script>
+</div>
 <div id="center_column_home">
 <div id="slider_center">
 <div id="tmnivoslider"> 	
@@ -16,7 +17,6 @@
 			<!-- <a class="slide_btn" href="{$home_link->url}">{$home_link->$field5}</a>  -->
 		</div>
 	{/foreach}
-</div>
 </div>
 </div>
 <script type="text/javascript">
