@@ -108,11 +108,12 @@
 			 -->
 			 
 			<div class="delivery_options">
-			{foreach $option_list as $key => $option}
-				<div class="delivery_option {if ($option@index % 2)}alternate_{/if}item">
-							
+				<!-- <div class="delivery_option {if ($option@index % 2)}alternate_{/if}item">  -->
+				<div class="delivery_option alternate_item">	
 					<label for="delivery_option_{$id_address}_{$option@index}">
 						<table id="carrierTable" class="std">
+							{foreach $option_list as $key => $option}
+						
 							<tr>	
                             <td class="delivery_option_logo">
                             		<input style="" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address}]" onchange="{if $opc}updateCarrierSelectionAndGift();{else}updateExtraCarrier('{$key}', {$id_address});{/if}" id="delivery_option_{$id_address}_{$option@index}" value="{$key}" {if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key}checked="checked"{/if} />
@@ -162,10 +163,12 @@
 								</div>
 								</td>
 							</tr>
+							{/foreach}
 						</table>
-				<table id="carrierTable" class="delivery_option_carrier std {if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key}selected{/if} {if $option.unique_carrier}not-displayable{/if}">
+						<!-- 
+						<table id="carrierTable" class="delivery_option_carrier std {if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key}selected{/if} {if $option.unique_carrier}not-displayable{/if}">
 							{foreach $option.carrier_list as $carrier}
-							<!--  
+							 
 							<tr>
 								{if !$option.unique_carrier}
 								<td class="first_item">
@@ -192,32 +195,38 @@
 										{if $product@index == 4}<acronym title="{/if}{if $product@index >= 4}{$product.name}{if !$product@last}, {else}">...</acronym>){/if}{else}{$product.name}{if !$product@last}, {else}){/if}{/if}{/foreach}
 									{/if}
 									
-								</td>
-							</tr>
-							 -->
-							<tr>
-								<p>		
-									<a href="index.php?id_cms=8&controller=cms&id_lang=1" target="_blank">Please read our Shipping Policy</a>
-								</p>
-							</tr>
-							<tr>
-								{if $conditions AND $cms_id}
-									<!--  <h3 class="condition_title">{l s='Terms of service'}</h3>  -->
-									<p class="checkbox">
-										<input type="checkbox" name="cgv" id="cgv" value="1" {if $checkedTOS}checked="checked"{/if} />
-										<label for="cgv">{l s='I agree to the Terms of Service and will adhere to them unconditionally.'}</label> 
-										<a href="{$link_conditions}" class="iframe">{l s='(Terms of Service)'}</a>
-									</p>
-									<script type="text/javascript">$('a.iframe').fancybox();</script>
-								{/if}
-
-							</tr>
-							
-						{/foreach}
-						</table>
+									</td>
+								</tr>
+	
+							{/foreach}
+	
+							</table>
+							-->
 					</label>
 				</div>
-			{/foreach}
+			
+			
+			<br>
+			
+			<div class="delivery_options">
+							<div class="delivery_option {if ($option@index % 2)}alternate_{/if}item">
+			
+			<table id="carrierTable" class="std">
+				{if $conditions AND $cms_id}
+					<!--  <h3 class="condition_title">{l s='Terms of service'}</h3>  -->
+					<p class="checkbox">
+						<input type="checkbox" name="cgv" id="cgv" value="1" {if $checkedTOS}checked="checked"{/if} />
+						<label for="cgv">{l s='I agree to the Terms of Service and will adhere to them unconditionally.'}</label> 
+						<a href="{$link_conditions}" class="iframe">{l s='(Terms of Service and Shipping policy)'}</a>
+					</p>
+					<script type="text/javascript">$('a.iframe').fancybox();</script>
+				{/if}
+			</table>
+			</div>
+			</div>
+
+
+			
 			</div>
 			<div class="hook_extracarrier" id="HOOK_EXTRACARRIER_{$id_address}">{if isset($HOOK_EXTRACARRIER_ADDR) &&  isset($HOOK_EXTRACARRIER_ADDR.$id_address)}{$HOOK_EXTRACARRIER_ADDR.$id_address}{/if}</div>
 			{foreachelse}
@@ -259,6 +268,8 @@
 		</p>
 		{/if}
 		 -->
+		 
+
 	{/if}
 {/if}
 
