@@ -366,7 +366,7 @@ header {height:246px;position:relative;}
 #shopping_cart a span {font:helvetica 17px "Georgia";color:#f8c26d;text-transform:none;}
 #shopping_cart a:hover span {color:#fff;}
 
-#header_user {position:absolute;right:0;top:88px;}
+#header_user {position:absolute;right:0;top:20px;}
 #header_user li {float:left;font:helvetica 13px "helvetica";color:#fff;}
 #header_user li a {font:helvetica 13px "helvetica";text-decoration:none;}
 #header_user li a:hover {}
