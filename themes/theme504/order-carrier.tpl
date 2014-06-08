@@ -117,6 +117,7 @@
 							<tr>	
                             <td class="delivery_option_logo">
                             		<input style="" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address}]" onchange="{if $opc}updateCarrierSelectionAndGift();{else}updateExtraCarrier('{$key}', {$id_address});{/if}" id="delivery_option_{$id_address}_{$option@index}" value="{$key}" {if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key}checked="checked"{/if} />
+									<!-- 
 									{foreach $option.carrier_list as $carrier}
 										{if $carrier.logo}
 											<img src="{$carrier.logo}" alt="{$carrier.instance->name}"/>
@@ -125,6 +126,7 @@
 											{if !$carrier@last} - {/if}
 										{/if}
 									{/foreach}
+									 -->
 								</td>
                                 <td>
 								{if $option.unique_carrier}
@@ -135,6 +137,7 @@
 										<div class="delivery_option_delay">{$carrier.instance->delay[$cookie->id_lang]}</div>
 									{/if}
 								{/if}
+								<!--  
 								{if count($option_list) > 1}
 									{if $option.is_best_grade}
 										{if $option.is_best_price}
@@ -148,6 +151,7 @@
 										{/if}
 									{/if}
 								{/if}
+								 -->
 								</td>
 								<td>
 								<div class="delivery_option_price">
