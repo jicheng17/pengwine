@@ -2469,6 +2469,7 @@ class CartCore extends ObjectModel
 	 */
 	public function getPackageShippingCost($id_carrier = null, $use_tax = true, Country $default_country = null, $product_list = null)
 	{
+		
 		if ($this->isVirtualCart())
 			return 0;
 
@@ -2476,10 +2477,12 @@ class CartCore extends ObjectModel
 			$default_country = Context::getContext()->country;
 
 		$complete_product_list = $this->getProducts();
+		
 		if (is_null($product_list))
 			$products = $complete_product_list;
 		else
 			$products = $product_list;
+			
 
 		if (Configuration::get('PS_TAX_ADDRESS_TYPE') == 'id_address_invoice')
 			$address_id = (int)$this->id_address_invoice;
@@ -2527,6 +2530,7 @@ class CartCore extends ObjectModel
 
 			$id_zone = (int)$default_country->id_zone;
 		}
+		
 
 		if ($id_carrier && !$this->isCarrierInRange((int)$id_carrier, (int)$id_zone))
 			$id_carrier = '';
@@ -2749,6 +2753,1485 @@ class CartCore extends ObjectModel
 		if ($use_tax && isset($carrier_tax))
 			$shipping_cost *= 1 + ($carrier_tax / 100);
 
+		// ###############################################################
+		$num=$this->getTotalWeight($product_list);
+		$countryAndState =  Address::getCountryAndState((int)$this->id_address_delivery);
+		$state=$countryAndState['id_state'];
+		
+		$pri = false;
+		if( $pri){
+			echo "carrierid =>".$id_carrier."-";	
+			echo 'products => '.$num.'-';
+			echo  'state => '.$state.'-';
+		}
+			
+		//Ground
+		//if( $id_carrier == 21 ){
+		if( $id_carrier == 31 ){	
+			//NO CA
+			if($state == 313){
+				if( $num == 1){
+					$shipping_cost = 19.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 20.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 22.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 24.50;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 25.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 27.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 30.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 31.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 32.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 33.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 34.25;
+				}
+				else{
+					$shipping_cost = 34.50;
+				}
+			}
+			//CA, NV
+			elseif($state == 5 || $state == 28){
+				if( $num == 1){
+					$shipping_cost = 19.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 20.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 22.25;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 25.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 26.50;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 28.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 32.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 33.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 34.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 35.25;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 36.75;
+				}
+				else{
+					$shipping_cost = 38.00;
+				}
+			}
+			//OR, UT,AZ,WA
+			elseif($state == 44 or $state == 37 or $state == 3 or $state == 47 ){
+				if( $num == 1){
+					$shipping_cost = 22.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 23.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 25.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 25.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 27.50;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 28.25;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 33.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 34.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 35.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 36.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 38.00;
+				}
+				else{
+					$shipping_cost = 39.50;
+				}
+			}
+			//ID, MT, CO, NM
+			elseif($state == 12 || $state == 26 || $state == 6 || $state == 31 ){
+				if( $num == 1){
+					$shipping_cost = 23.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 24.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 25.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 26.50;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 28.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 29.50;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 34.75;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 36.75;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 38.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 39.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 41.25;
+				}
+				else{
+					$shipping_cost = 42.50;
+				}
+			}
+			//ND,SD,NE,KS,OK,WY
+			elseif($state == 34 || $state == 41 || $state == 27 || $state == 16 || $state == 36 || $state == 50){
+				if( $num == 1){
+					$shipping_cost = 24.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 24.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 26.25;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 27.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 30.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 33.25;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 38.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 41.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 44.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 45.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 47.75;
+				}
+				else{
+					$shipping_cost = 49.50;
+				}
+			}
+			//MN,IA,MO,AR,LA,MS,WI
+			elseif($state == 23 || $state == 15 || $state == 25|| $state == 4||$state == 18||$state == 24||$state == 49){
+				if( $num == 1){
+					$shipping_cost = 24.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 25.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 27.50;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 29.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 32.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 36.25;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 42.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 44.75;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 47.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 49.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 52.00;
+				}
+				else{
+					$shipping_cost = 54.00;
+				}
+			}
+			//AK,HI
+			elseif($state == 2 || $state == 11){
+				if( $num == 1){
+					$shipping_cost = 46.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 56.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 64.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 74.00;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 77.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 85.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 91.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 98.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 105.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 111.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 117.50;
+				}
+				else{
+					$shipping_cost = 124.25;
+				}
+			}
+			//long list
+			else{
+				if( $num == 1){
+					$shipping_cost = 24.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 26.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 28.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 30.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 35.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 39.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 45.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 48.75;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 51.75;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 54.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 58.00;
+				}
+				else{
+					$shipping_cost = 60.50;
+				}
+			}
+		}
+		
+		//Three Day
+		//if( $id_carrier == 21 ){
+		elseif( $id_carrier == 30 ){	
+			//NO CA - 302
+			if($state == 313){
+				if( $num == 1){
+					$shipping_cost = 24.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 24.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 25.25;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 26.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 27.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 29.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 32.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 34.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 36.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 38.00;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 40.00;
+				}
+				else{
+					$shipping_cost = 42.00;
+				}
+			}
+			//CA, NV - 303
+			elseif($state == 5 || $state == 28){
+				if( $num == 1){
+					$shipping_cost = 24.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 24.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 25.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 27.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 30.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 33.50;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 38.00;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 38.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 40.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 41.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 45.50;
+				}
+				else{
+					$shipping_cost = 47.75;
+				}
+			}
+			//OR, UT,AZ,WA - 304
+			elseif($state == 44 or $state == 37 or $state == 3 or $state == 47 ){
+				if( $num == 1){
+					$shipping_cost = 24.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 25.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 27.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 30.50;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 34.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 36.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 40.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 42.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 45.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 47.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 50.75;
+				}
+				else{
+					$shipping_cost = 53.50;
+				}
+			}
+			//ID, MT, CO, NM - 305
+			elseif($state == 12 || $state == 26 || $state == 6 || $state == 31 ){
+				if( $num == 1){
+					$shipping_cost = 24.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 27.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 29.50;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 33.50;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 38.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 40.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 45.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 48.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 52.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 54.25;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 57.25;
+				}
+				else{
+					$shipping_cost = 62.25;
+				}
+			}
+			//ND,SD,NE,KS,OK,WY - 306
+			elseif($state == 34 || $state == 41 || $state == 27 || $state == 16 || $state == 36 || $state == 50){
+				if( $num == 1){
+					$shipping_cost = 25.50;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 30.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 36.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 40.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 47.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 51.25;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 56.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 60.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 65.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 69.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 74.25;
+				}
+				else{
+					$shipping_cost = 78.50;
+				}
+			}
+			//MN,IA,MO,AR,LA,MS,WI - 307
+			elseif($state == 23 || $state == 15 || $state == 25|| $state == 4||$state == 18||$state == 24||$state == 49){
+				if( $num == 1){
+					$shipping_cost = 31.50;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 33.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 38.50;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 43.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 49.50;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 54.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 62.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 67.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 72.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 77.25;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 81.50;
+				}
+				else{
+					$shipping_cost = 86.50;
+				}
+			}
+			//AK,HI - N.A.
+			elseif($state == 2 || $state == 11){
+				if( $num == 1){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 2){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 3){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 4){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 5){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 6){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 7){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 8){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 9){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 10){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 11){
+					$shipping_cost = -1;
+				}
+				else{
+					$shipping_cost = -1;
+				}
+			}
+			//long list - 308
+			else{
+				if( $num == 1){
+					$shipping_cost = 28.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 34.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 41.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 48.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 54.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 59.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 67.00;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 73.75;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 77.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 83.25;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 88.50;
+				}
+				else{
+					$shipping_cost = 93.00;
+				}
+			}
+		}
+		
+		//Two Day
+		//if( $id_carrier == 21 ){
+		elseif( $id_carrier == 32 ){	
+			//NO CA - 202
+			if($state == 313){
+				if( $num == 1){
+					$shipping_cost = 23.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 23.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 26.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 27.50;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 29.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 30.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 34.75;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 37.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 40.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 40.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 43.25;
+				}
+				else{
+					$shipping_cost = 45.50;
+				}
+			}
+			//CA, NV - 203
+			elseif($state == 5 || $state == 28){
+				if( $num == 1){
+					$shipping_cost = 23.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 24.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 28.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 29.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 31.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 34.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 38.75;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 41.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 43.75;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 46.25;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 48.25;
+				}
+				else{
+					$shipping_cost = 50.50;
+				}
+			}
+			//OR, UT,AZ,WA - 204
+			elseif($state == 44 or $state == 37 or $state == 3 or $state == 47 ){
+				if( $num == 1){
+					$shipping_cost = 23.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 25.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 30.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 33.00;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 36.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 40.50;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 44.75;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 46.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 50.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 52.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 55.25;
+				}
+				else{
+					$shipping_cost = 59.00;
+				}
+			}
+			//ID, MT, CO, NM - 205
+			elseif($state == 12 || $state == 26 || $state == 6 || $state == 31 ){
+				if( $num == 1){
+					$shipping_cost = 27.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 30.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 36.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 41.00;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 46.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 50.50;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 57.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 61.75;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 65.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 68.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 72.25;
+				}
+				else{
+					$shipping_cost = 76.75;
+				}
+			}
+			//ND,SD,NE,KS,OK,WY - 206
+			elseif($state == 34 || $state == 41 || $state == 27 || $state == 16 || $state == 36 || $state == 50){
+				if( $num == 1){
+					$shipping_cost = 29.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 38.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 46.50;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 54.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 62.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 69.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 77.75;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 84.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 90.75;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 96.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 105.00;
+				}
+				else{
+					$shipping_cost = 111.25;
+				}
+			}
+			//MN,IA,MO,AR,LA,MS,WI - 207
+			elseif($state == 23 || $state == 15 || $state == 25|| $state == 4||$state == 18||$state == 24||$state == 49){
+				if( $num == 1){
+					$shipping_cost = 32.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 40.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 49.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 58.00;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 65.50;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 74.25;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 82.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 89.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 96.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 102.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 109.25;
+				}
+				else{
+					$shipping_cost = 116.75;
+				}
+			}
+			//AK,HI - N.A.
+			elseif($state == 2 || $state == 11){
+				if( $num == 1){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 2){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 3){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 4){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 5){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 6){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 7){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 8){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 9){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 10){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 11){
+					$shipping_cost = -1;
+				}
+				else{
+					$shipping_cost = -1;
+				}
+			}
+			//long list - 208
+			else{
+				if( $num == 1){
+					$shipping_cost = 34.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 41.00;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 50.25;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 59.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 66.50;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 75.25;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 84.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 92.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 98.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 105.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 112.00;
+				}
+				else{
+					$shipping_cost = 119.25;
+				}
+			}
+		}
+		//Overnight
+		//if( $id_carrier == 21 ){
+		elseif( $id_carrier == 29 ){	
+			//NO CA - 102
+			if($state == 313){
+				if( $num == 1){
+					$shipping_cost = 27.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 29.00;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 32.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 36.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 38.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 40.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 45.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 48.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 50.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 54.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 56.25;
+				}
+				else{
+					$shipping_cost = 60.50;
+				}
+			}
+			//CA, NV - 103
+			elseif($state == 5 || $state == 28){
+				if( $num == 1){
+					$shipping_cost = 31.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 37.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 39.50;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 44.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 48.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 52.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 56.75;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 59.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 65.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 67.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 71.25;
+				}
+				else{
+					$shipping_cost = 76.50;
+				}
+			}
+			//OR, UT,AZ,WA - 104
+			elseif($state == 44 or $state == 37 or $state == 3 or $state == 47 ){
+				if( $num == 1){
+					$shipping_cost = 38.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 47.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 57.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 64.00;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 71.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 80.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 85.75;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 92.50;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 100.75;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 105.25;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 111.50;
+				}
+				else{
+					$shipping_cost = 117.75;
+				}
+			}
+			//ID, MT, CO, NM - 105
+			elseif($state == 12 || $state == 26 || $state == 6 || $state == 31 ){
+				if( $num == 1){
+					$shipping_cost = 41.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 50.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 61.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 70.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 78.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 86.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 91.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 99.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 105.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 113.00;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 119.75;
+				}
+				else{
+					$shipping_cost = 126.50;
+				}
+			}
+			//ND,SD,NE,KS,OK,WY - 106
+			elseif($state == 34 || $state == 41 || $state == 27 || $state == 16 || $state == 36 || $state == 50){
+				if( $num == 1){
+					$shipping_cost = 46.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 53.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 67.25;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 77.00;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 83.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 93.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 100.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 103.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 112.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 120.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 126.25;
+				}
+				else{
+					$shipping_cost = 132.00;
+				}
+			}
+			//MN,IA,MO,AR,LA,MS,WI - 107
+			elseif($state == 23 || $state == 15 || $state == 25|| $state == 4||$state == 18||$state == 24||$state == 49){
+				if( $num == 1){
+					$shipping_cost = 49.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 56.25;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 69.00;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 79.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 88.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 95.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 101.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 109.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 116.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 123.25;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 130.00;
+				}
+				else{
+					$shipping_cost = 138.75;
+				}
+			}
+			//AK,HI - 109
+			elseif($state == 2 || $state == 11){
+				if( $num == 1){
+					$shipping_cost = 53.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 67.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 78.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 85.50;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 96.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 101.50;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 116.25;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 130.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 142.50;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 152.50;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 159.75;
+				}
+				else{
+					$shipping_cost = 168.25;
+				}
+			}
+			//long list - 108
+			else{
+				if( $num == 1){
+					$shipping_cost = 50.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 60.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 70.50;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 81.00;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 90.25;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 98.50;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 104.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 113.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 119.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 127.00;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 133.75;
+				}
+				else{
+					$shipping_cost = 139.75;
+				}
+			}
+		}
+		
+		//GSO
+		//if( $id_carrier == 21 ){
+		elseif( $id_carrier == 16 ){	
+			//NO CA
+			if($state == 313){
+				if( $num == 1){
+					$shipping_cost = 11.00;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 12.00;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 12.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 14.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 15.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 16.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 19.00;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 19.25;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 20.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 20.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 22.00;
+				}
+				else{
+					$shipping_cost = 22.25;
+				}
+			}
+			//Mid CA
+			elseif($state == 314){
+				if( $num == 1){
+					$shipping_cost = 11.75;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 12.50;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 13.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 14.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 16.00;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 16.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 20.00;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 20.75;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 22.00;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 22.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 24.00;
+				}
+				else{
+					$shipping_cost = 24.00;
+				}
+			}
+			//SoCal
+			elseif($state == 315 ){
+				if( $num == 1){
+					$shipping_cost = 12.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 13.75;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 14.50;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 15.75;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 16.50;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 17.00;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 20.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 22.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 22.75;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 24.00;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 25.25;
+				}
+				else{
+					$shipping_cost = 26.00;
+				}
+			}
+			//AZ/NV
+			elseif($state == 3 || $state == 28){
+				if( $num == 1){
+					$shipping_cost = 12.25;
+				}
+				elseif ($num == 2){
+					$shipping_cost = 14.00;
+				}
+				elseif ($num == 3){
+					$shipping_cost = 14.75;
+				}
+				elseif ($num == 4){
+					$shipping_cost = 16.25;
+				}
+				elseif ($num == 5){
+					$shipping_cost = 17.75;
+				}
+				elseif ($num == 6){
+					$shipping_cost = 18.75;
+				}
+				elseif ($num == 7){
+					$shipping_cost = 22.50;
+				}
+				elseif ($num == 8){
+					$shipping_cost = 24.00;
+				}
+				elseif ($num == 9){
+					$shipping_cost = 25.25;
+				}
+				elseif ($num == 10){
+					$shipping_cost = 26.75;
+				}
+				elseif ($num == 11){
+					$shipping_cost = 28.25;
+				}
+				else{
+					$shipping_cost = 29.00;
+				}
+			}
+			else{
+				if( $num == 1){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 2){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 3){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 4){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 5){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 6){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 7){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 8){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 9){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 10){
+					$shipping_cost = -1;
+				}
+				elseif ($num == 11){
+					$shipping_cost = -1;
+				}
+				else{
+					$shipping_cost = -1;
+				}
+			}
+		}
+		
+		//###############################################################
 		$shipping_cost = (float)Tools::ps_round((float)$shipping_cost, 2);
 		Cache::store($cache_id, $shipping_cost);
 
