@@ -145,6 +145,16 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 	{/if}
 	<!-- right infos-->
 	<div id="pb-right-column">
+		{if $product->name == 'King 2010' }
+			<h3>Premium</h3>
+		{elseif $product->name == 'Humbolt 2009' || $product->name == 'Magellan 2010' }
+			<h3>Reserve</h3>
+		{elseif $product->name == 'Gala 2009' || $product->name == 'Pagos 2010' }
+			<h3>Varietal</h3>
+		{/if}
+		
+		
+		</br>
 		<!-- product img-->
 		<div id="image-block" class="bordercolor">
 		{if $have_image}
@@ -376,7 +386,11 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 		{if $product->description_short OR $packItems|@count > 0}
 		<div id="short_description_block" class="bordercolor">
 			{if $product->description_short}
-				<div id="short_description_content" class="rte align_justify">{$product->description}</div>
+				<div id="short_description_content" class="rte align_justify">{$product->description}
+				<p class="cart_navigation">
+					<a href="index.php?controller=order" title="Checkout" class="exclusive standard-checkout" >Checkout</a>
+				</p>
+				</div>
 			{/if}
 			<!--  
 			{if $product->description}
