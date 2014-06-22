@@ -40,7 +40,6 @@
 	{include file="$tpl_dir./breadcrumb.tpl"}
 {/if}
 
-{if !$opc}<h1>{l s='Choose your payment method'}</h1>{else}<h2><span>3</span> {l s='Choose your payment method'}</h2>{/if}
 
 {if !$opc}
 	{assign var='current_step' value='payment'}

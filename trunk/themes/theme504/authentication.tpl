@@ -124,6 +124,10 @@ $(function(){ldelim}
 		</ol>
 	</div>
 	{/if}-->
+	
+
+	<p>Dear PengWine Friend, be sure to add US.sales@pengwine.com to your address list to bypass spam filters.</p> 
+	
 	<form action="{$link->getPageLink('authentication', true)}" method="post" id="create-account_form" class="std">
 		<fieldset>
 			<h3>{l s='Create your account'}</h3>
@@ -136,9 +140,10 @@ $(function(){ldelim}
 				</p>
 				<p class="submit">
 					{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'htmlall':'UTF-8'}" />{/if}
-					<input type="button" id="SubmitCreate" name="SubmitCreate" class="button_large" value="{l s='Create your account'}" />
-					<input type="hidden" class="hidden" name="SubmitCreate" value="{l s='Create your account'}" />
+					<input type="button" id="SubmitCreate" name="SubmitCreate" class="button_large" value="{l s='Create your account'}"  style="width:150px"/>
+					<input type="hidden" class="hidden" name="SubmitCreate" value="{l s='Create your account'}"/>
 				</p>
+				
 			</div>
 		</fieldset>
 	</form>
@@ -155,7 +160,7 @@ $(function(){ldelim}
 					<label for="passwd">{l s='Password'}</label>
 					<span><input type="password" id="passwd" name="passwd" value="{if isset($smarty.post.passwd)}{$smarty.post.passwd|stripslashes}{/if}" class="account_input" /></span>
 				</p>
-				<p class="lost_password"><a href="{$link->getPageLink('password')}">{l s='Forgot your password?'}</a></p>
+				<p class="lost_password"><a href="{$link->getPageLink('password')}" style="color: #318DFD;">{l s='Forgot your password?'}</a></p>
 				<p class="submit">
 					{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'htmlall':'UTF-8'}" />{/if}
 					<input type="submit" id="SubmitLogin" name="SubmitLogin" class="button" value="{l s='Log in'}" />
@@ -522,7 +527,7 @@ $(function(){ldelim}
 	{if $onr_phone_at_least}
 		<p class="inline-infos">{l s='You must register at least one phone number'}</p>
 	{/if}
-		<p class="text">
+		<p class="required text">
 			<label for="phone">{l s='Home phone'}</label>
 			<input type="text" class="text" name="phone" id="phone" value="{if isset($smarty.post.phone)}{$smarty.post.phone}{/if}" />
 		</p>
