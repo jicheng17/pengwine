@@ -112,6 +112,8 @@
 				{/if}
 				</td>
 			</tr>
+			
+			<!--  
 			{if $total_shipping_tax_exc <= 0 && !isset($virtualCart)}
 				<tr class="cart_total_delivery">
 					<td colspan="5">{l s='Shipping:'}</td>
@@ -137,24 +139,27 @@
 					</tr>
 				{/if}
 			{/if}
+			 -->
 	{if $use_taxes}
 			<tr class="cart_total_price">
 				<td colspan="5">{l s='Total (tax excl.):'}</td>
-				<td  class="price" id="total_price_without_tax">{displayPrice price=$total_price_without_tax}</td>
+				<td  class="price" id="total_price_without_tax">{displayPrice price=($total_price_without_tax - $total_shipping_tax_exc)}</td>
 			</tr>
 			<!-- jc tax change:   -->
+			{if $total_tax > 0}
 			<tr class="cart_total_tax">
 				<td colspan="5">{l s='Total tax:'}</td>
 				<td  class="price" id="total_tax">{displayPrice price=$total_tax}</td>
 			</tr>
+			{/if}
 	{/if}
 			<tr class="cart_total_price">
 				{if $use_taxes}
 					<td colspan="5">{l s='Total:'}</td>
-			        <td class="price" id="total_price"><span class="price"> {displayPrice price=$total_price}</span></td>
+			        <td class="price" id="total_price"><span class="price"> {displayPrice price=($total_price -$total_shipping_tax_exc)}</span></td>
 				{else}
 					<td colspan="5">{l s='Total:'}</td>
-					<td class="price" id="total_price"><span class="price"> {displayPrice price=$total_price_without_tax}</span></td>
+					<td class="price" id="total_price"><span class="price"> {displayPrice price=( $total_price_without_tax - $total_shipping_tax_exc)}</span></td>
 				{/if}
 			</tr>
 		</tfoot>
@@ -327,6 +332,8 @@
 	{$addresses_style.phone_mobile = 'address_phone_mobile'}
 	{$addresses_style.alias = 'address_title'}
 {/if}
+
+<!--  
 {if ((!empty($delivery_option) AND !isset($virtualCart)) OR $delivery->id OR $invoice->id) AND !$opc}
 <div class="order_delivery">
 	{if !isset($formattedAddresses)}
@@ -374,6 +381,9 @@
     <div class="clearblock"></div>
 </div>
 {/if}
+ -->
+ 
+
 <p class="cart_navigation">
 	{if !$opc}
 		<a href="{if $back}{$link->getPageLink('order', true, NULL, 'step=1&amp;back={$back}')}{else}{$link->getPageLink('order', true, NULL, 'step=1')}{/if}" class="exclusive standard-checkout" title="{l s='Next'}">{l s='Next'} &raquo;</a>
@@ -381,7 +391,9 @@
 			<a href="{if $back}{$link->getPageLink('order', true, NULL, 'step=1&amp;back={$back}')}{else}{$link->getPageLink('order', true, NULL, 'step=1')}{/if}&amp;multi-shipping=1" class="multishipping-button multishipping-checkout exclusive" title="{l s='Next'}">{l s='Next'} &raquo;</a>
 		{/if}
 	{/if}
+ 	<!--  	
 	<a href="{if (isset($smarty.server.HTTP_REFERER) && strstr($smarty.server.HTTP_REFERER, 'order.php')) || strstr($smarty.server.HTTP_REFERER, 'order-opc') || !isset($smarty.server.HTTP_REFERER)}{$link->getPageLink('index')}{else}{$smarty.server.HTTP_REFERER|escape:'htmlall':'UTF-8'|secureReferrer}{/if}" class="button_large" title="{l s='Continue shopping'}">&laquo; {l s='Continue shopping'}</a>
+	-->
 </p>
 {if !empty($HOOK_SHOPPING_CART_EXTRA)}
     <div class="clearblock"></div>

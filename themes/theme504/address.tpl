@@ -192,12 +192,19 @@ $(function(){ldelim}
 	{if $onr_phone_at_least}
 		<h3 class="required">{l s='You must register at least one phone number'} <sup class="required">*</sup></h3>
 	{/if}
-		<p class="text">
-			<label for="phone">{l s='Home phone'}</label>
+		<p class="required text">
+			<label for="phone">{l s='Home phone'}<sup>*</sup></label>
 			<input type="text" id="phone" name="phone" value="{if isset($smarty.post.phone)}{$smarty.post.phone}{else}{if isset($address->phone)}{$address->phone}{/if}{/if}" />
 		</p>
-		<p class="text">
-			<label for="phone_mobile">{l s='Mobile phone'}</label>
+	
+		<!-- p class="text">
+			<label for="phone">{l s='Home phone'}</label>
+			
+			<input type="text" id="phone" name="phone" value="{if isset($smarty.post.phone)}{$smarty.post.phone}{else}{if isset($address->phone)}{$address->phone}{/if}{/if}" />
+		</p -->
+		
+		<p class="required text">
+			<label for="phone_mobile">{l s='Mobile phone'}<sup>*</sup></label>
 			<input type="text" id="phone_mobile" name="phone_mobile" value="{if isset($smarty.post.phone_mobile)}{$smarty.post.phone_mobile}{else}{if isset($address->phone_mobile)}{$address->phone_mobile}{/if}{/if}" />
 		</p>
 		<p class="required text" id="adress_alias">

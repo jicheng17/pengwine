@@ -220,7 +220,7 @@
 			</ul>
 	<br class="clear" />
 		<p class="address_add submit">
-			<a href="{$link->getPageLink('address', true, NULL, "back={$back_order_page}?step=1{if $back}&mod={$back}{/if}")}" title="{l s='Add'}" class="button_large">{l s='Add a new address'}</a>
+			<a href="{$link->getPageLink('address', true, NULL, "back={$back_order_page}?step=1{if $back}&mod={$back}{/if}")}" title="{l s='Add'}" class="button_large">{l s='New Address'}</a>
 		</p>
 		{if !$opc}
 		<div id="ordermsg">
